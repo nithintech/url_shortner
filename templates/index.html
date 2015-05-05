@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="jumbotron">
+<div class="row">
+    <div class="col-md-2" style="background-color:lavender;">
+    </div>
+<h1><h1 style="text-align:center;"><font face="Times New Roman" color="red"><i><b>URL SHORTNER</i></b></h1><hr><hr><br>
+<h2><font color="brown">Enter your URL here</h2>
+<form action="" method="post" id="url" class=""well well-sm"" placeholder="enter your url">
+{{form.hidden_tag()}}
+{{form.url(size=55,height=40)}}<input type="submit" value="shorten" class="btn btn-primary" color="green"></button></form><br><br><hr><hr>
+
+{%for o in out %}
+<h2><font color="green">CUSTOM URL</h2> <div><p><a href=http://127.0.0.1:5000/{{o[0]}} class="well well-sm">http://127.0.0.1:5000/{{o[0]}}</a></div></p>
+{%endfor%}
+</div>
+</div>
+</html>
